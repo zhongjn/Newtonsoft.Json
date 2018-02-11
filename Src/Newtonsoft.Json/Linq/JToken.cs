@@ -1925,6 +1925,15 @@ namespace Newtonsoft.Json.Linq
         }
 
         /// <summary>
+        /// Creates an instance of dynamic ExpandoObject from the <see cref="JToken"/>.
+        /// </summary>
+        /// <returns>The new dynamic ExpandoObject created from the JSON value.</returns>
+        public object ToObject()
+        {
+            return ToObject<ExpandoObject>();
+        }
+
+        /// <summary>
         /// Creates an instance of the specified .NET type from the <see cref="JToken"/>.
         /// </summary>
         /// <param name="objectType">The object type that the token will be deserialized to.</param>
